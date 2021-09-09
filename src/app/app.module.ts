@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ClienteService } from './clientes/cliente.service';
 
 const ROUTES: Routes = [
+  //{path: '', redirectTo: '/clientes', pathMatch: 'full'}, //cuando se carga la pagina por default entramos aqui
   {path: 'clientes', component: ClientesComponent}
 ]
 
@@ -23,7 +24,7 @@ const ROUTES: Routes = [
     AppRoutingModule,
     RouterModule.forRoot(ROUTES) //arreglo de rutas
   ],
-  providers: [ClienteService], //servicios se van a incluir
+  providers: [ClienteService], //servicios se van a incluir en la app, se pueden incluir con comas
   bootstrap: [AppComponent]
 })
 export class AppModule { }
