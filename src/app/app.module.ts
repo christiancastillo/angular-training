@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ClienteService } from './clientes/cliente.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const ROUTES: Routes = [
   //{path: '', redirectTo: '/clientes', pathMatch: 'full'}, //cuando se carga la pagina por default entramos aqui
@@ -22,7 +23,8 @@ const ROUTES: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(ROUTES) //arreglo de rutas
+    RouterModule.forRoot(ROUTES),
+    BrowserAnimationsModule //arreglo de rutas
   ],
   providers: [ClienteService], //servicios se van a incluir en la app, se pueden incluir con comas
   bootstrap: [AppComponent]
